@@ -9,13 +9,6 @@ package oodjassignment;
  *
  * @author Owner
  */
-public class OODJAssignment {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+public interface Search_User {
+    void search_user();    
 }
