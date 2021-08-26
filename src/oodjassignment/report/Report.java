@@ -3,12 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package oodjassignment;
+package oodjassignment.report;
+
+import java.util.Date;
 
 /**
  *
  * @author Owner
  */
-public class Customer extends user_account{
-    
+public class Report {
+    public void getReport(String oID, Date cusAssDate, double totalPrice){
+        //code of get report
+    }
 }

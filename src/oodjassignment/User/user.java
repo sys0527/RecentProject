@@ -3,18 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package oodjassignment;
+package oodjassignment.User;
 
 /**
  *
  * @author Owner
  */
-public class user_account {
+public class user {
     public String userID,userName;
     private String password,userEmail,userPhone,loginStatus;
     protected String userType;
     
+    public String getUserName(){
+        return userName;
+        
+    }
+    public void setUserName(String userName){
+        this.userName=userName;
+    }
     
+    public void setPassword(String password){
+        this.password = password;
+    }
     public void RegisterUser(){
         //code of register user
     }
@@ -42,4 +52,10 @@ public class user_account {
     public void ViewUser(){
         //code of view all user detail
     }
+    
+    public String toString(){
+        return"User[username="+userName+",password="+password+"]";
+    }
+    
+    
 }

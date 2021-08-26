@@ -3,14 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package oodjassignment;
+package oodjassignment.User;
 
 /**
  *
  * @author Owner
  */
-public class Monthly_Report extends Report {
-    public void getMonthly_Report(){
+public class Admin extends user{
     
-}
+    
+    
+    
+    
+    public void search_user() {
+	System.out.println("Car object invokes reverse()...");
+    }
 }

@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package oodjassignment;
+package oodjassignment.User;
 
 /**
  *
  * @author Owner
  */
-public interface Search_User {
-    void search_user();    
+public class Customer extends user{
+    
 }
