@@ -1,0 +1,47 @@
+#并列关系
+<html>	</html>
+<body>	</body>
+
+#单标签
+<br>
+
+#包含关系
+<head>
+	<title> </title>
+</head>
+
+#列表
+<ul>
+	<li></li>
+</ul>
+
+<特殊用法>
+
+<img src=".jpg"  
+ alt="if无法显示时出现的字？" 
+ title="滑鼠放在上面浮现的字" 
+ width="520">
+
+<br>：断开，后面就下一行
+<em></em>： 斜着的字
+<strong></strong>:粗体
+<ins></ins>:下划线
+<del></del>:中间划掉
+
+
+eg：
+<html>
+<head>
+	    <title>标题</title>
+</head>
+<body>
+	hello,world
+	<h1>大标题</h1>
+	<h2>次标题</h2>
+	<h3>...</h3>
+	<ul>
+  	<li>列表1</li>
+    	<li>列表2</li>
+	</ul>
+</body>
+</html>

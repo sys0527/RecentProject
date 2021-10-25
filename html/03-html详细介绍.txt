@@ -1,0 +1,28 @@
+学语言的定义？
+写出那种语言风格的code
+
+浏览器的渲染过程
+1.解析HTML去构建DOM树（DOM+HTML）
+2.渲染树形结构（CSS）
+3.生成渲染的树形图布局（形成布局）
+4.绘制树形图（整体形成）
+
+好的html
+-了解标准及遵守绝大多数标准
+-注重可读性，从ID及CLASS的命名
+-关注SEO与代码的联系
+
+<div class="col-md-3 right">
+    {% nevercache %}
+    {% include "includes/user_panel.html" %}
+    {% endnevercache %}
+    <div class="panel panel-default">
+    <div class="panel-body">
+    {% block right_panel %}
+    {% ifinstalled mezzanine.twitter %}
+    {% include "twitter/tweets.html" %}
+    {% endifinstalled %}
+    {% endblock %}
+    </div>
+    </div>
+</div>
