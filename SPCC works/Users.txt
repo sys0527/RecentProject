@@ -1,3 +1,0 @@
-Sim	pass	Admin
-Abu	123	User
-Ali	abc	User
