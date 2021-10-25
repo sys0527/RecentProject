@@ -1,4 +1,0 @@
-12345	Hamza	Yusuf	150
-23456	Naom	Chomsky	420
-34567	Angela	Merkel	500
-45678	Time	Lee	150
