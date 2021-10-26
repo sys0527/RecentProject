@@ -1,0 +1,26 @@
+Question 1
+Find the relationship between 1,2,3 grade of math’s mark
+Analysis 1.1Find the highest mark and mean that each grade score
+Analysis 1.2Find the relationship between sex and score
+Analysis 1.3 Find the relationship between age and score
+
+Question 2
+How the study environment affect student marks?
+Analysis 2.1 Compare the two schools, which school teaches students better?
+Analysis 2.2 Find the relationship between having home internet with study time
+Analysis 2.3 Find the relationship between family size and study time
+Analysis 2.4 Find the relationship between study time with score
+
+Question 3
+How to score higher mark?
+Analysis 3.1What is the common feature of the higher mark’s student? 
+Analysis 3.2 Find the relationship between want to go for higher education and marks.
+Analysis 3.3 Find the relationship between romantic and student marks
+Analysis 3.4  Find the relationship between frequent social activities and marks
+Analysis 3.5 Find the relationship between absences and marks
+
+Question 4
+How does parent become a factor of affect student mark?
+Analysis 4.1 Is a student who born in a high edu family will make he/she become smarter?
+Analysis 4.2 Find the relationship between family relationship quality and parent living status with marks
+Analysis 4.3 Find the relationship of family education support or extra education support with family relationship quality
