@@ -1,0 +1,6 @@
+U01,sim,123,sim123@gmail.com,0123456789,customer
+U02,ong,123,cx@gmail.com,0122786175,admin
+U03,Ong Chong Xian,u03,cx01@gmail.com,098765432,customer
+U04,sim,123,U04@gmail.com,0122786175,customer
+U05,sim2,123,sim2@gmail.com,0127276175,customer
+U06,sim,123,sim6@gmail.com,123456,customer
