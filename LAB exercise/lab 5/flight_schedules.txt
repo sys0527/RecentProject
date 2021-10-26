@@ -1,0 +1,5 @@
+A01	0900	1000	China	guam	
+Test	1000	1300	India	KL	
+A04	1000	1500	Johor	London	
+Atest	1000	1300	KL	Guam	
+A06	1200	1500	Asia	America	

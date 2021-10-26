@@ -1,0 +1,19 @@
+PRINT'Welcome to student registration system'
+PRINT 'Please enter your name'
+READ name
+PRINT 'Please enter your student id:'
+READ studentId
+PRINT 'Please enter your marks:'
+READ mark
+PRINT 'Please enter your grade:'
+READ grade
+PRINT 'Please enter your CGPA:
+READ cgpa
+
+PRINT 'Your details are as follows:'
+PRINT 'Name: ', name
+PRINT 'TP number: ', studentId
+PRINT 'Marks: ', mark
+PRINT 'Grade:' ,grade
+PRINT 'CGPA: ', cgpa
+PRINT 'Thank you for registering.'

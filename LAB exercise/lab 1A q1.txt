@@ -1,0 +1,5 @@
+PRINT 'Welcome to student registration system'
+PRINT'1. Register'
+PRINT'2. Update'
+PRINT'3. Delete'
+PRINT'4. Exit'

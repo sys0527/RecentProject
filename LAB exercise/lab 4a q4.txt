@@ -1,0 +1,29 @@
+PROGRAM LAB4CQ4
+BEGIN
+	IMPORT math
+	FUNCTION diameter(r)
+		RETURN r*2
+	ENDFUNCTION
+	FUNCTION circumference(r)
+		RETURN 2*3.14159*r*r
+	ENDFUNCTION
+	FUNCTION area(r)
+		RETURN 3.14159*r**2
+	ENDFUNCTION
+	FUNCTION menu()
+		PRINT'1.diameter  \n2.circumference  \n3.area  \nenter which function you want to use:'
+		READ choice
+		PRINT'Enter the radius of a circle'
+		READ radius
+		IF choice == 1:
+			PRINT 'The diameter is', diameter(radius)
+		ELIF choice == 2:
+			PRINT 'The circumference is', circumference(radius)
+		ELIF choice == 3:
+			PRINT 'The area is', area(radius)
+		ELSE
+			PRINT'Wrong typing,please enter number 1 to 3'
+		ENDIF
+	ENDFUNCTION
+	CALL menu()
+END

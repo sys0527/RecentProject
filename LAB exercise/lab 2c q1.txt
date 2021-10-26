@@ -1,0 +1,10 @@
+PROGRAM LAB2CQ1
+BEGIN
+	LOOP numOfTemp FROM 1 TO 15 STEP 1
+		PRINT'Enter the Fahrenheit Temperature:'
+		READ fahTemp
+		celsiusTemp = (fahTemp - 32)*5/9
+		PRINT ('CelsiusTemp is %d C'%(celsiusTemp))
+	ENDLOOP
+	PRINT('all temperatures processed ')
+END

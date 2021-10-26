@@ -1,0 +1,28 @@
+PROGRAM Lab2aQ3
+BEGIN
+PRINT ('Enter your marks:')
+READ mark
+IF mark >= 0 AND mark <= 100 THEN
+	status = Pass
+	IF mark >= 80 THEN
+		grade = A
+	ELSE
+		IF mark >= 70 THEN
+			grade =  B
+		ELSE
+			IF mark >= 60 THEN
+				grade = C
+			ELSE
+				IF mark >= 50 THEN
+					grade = D
+				ELSE
+					grade = F
+					status = Fail
+				ENDIF
+			ENDIF
+		ENDIF
+	ENDIF
+	PRINT('Your grade is :',grade)
+	PRINT('Your are ',status)
+ELSE
+	PRINT('Invalid entry')

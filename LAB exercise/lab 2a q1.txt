@@ -1,0 +1,8 @@
+PRINT('Enter selling price: ')
+READ sellPrice
+PRINT('Enter buying price: ')
+READ buyPrice
+IF sellPrice > buyPrice THEN
+	PRINT('You have profit in trading of this item')
+ELSE
+	PRINT('You have loss in trading of this item')

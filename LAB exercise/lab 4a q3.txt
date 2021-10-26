@@ -1,0 +1,44 @@
+PROGRAM LAB4aQ3
+BEGIN
+	FUNCTION add(num1,num2)
+		RETURN num1 + num2
+	ENDFUNCTION
+
+	FUNCTION subtract(num1,num2)
+		IF num1 > num2 THEN
+  	   	   	RETURN num1 - num2
+ 	   	ELSE
+ 		       	RETURN num2 - num1
+	ENDFUNCTION
+
+	FUNCTION multiply(num1,num2)
+		RETURN num1 * num2
+	ENDFUNCTION
+
+	FUNCTION devide(num1,num2)
+		IF num1 > num2 THEN
+	        	RETURN num1 / num2
+	    	ELSE
+	        	RETURN num2 / num1
+	ENDFUNCTION
+
+	PRINT' Calculator Program \n  1.ADD\n  2.SUBTRACT\n  3.MULTIPLY\n  4.DIVIDE \n Choose the operation from the given options: '
+	READ operation
+	PRINT'Enter first number:'
+	READ firstNum
+	PRINT'Enter secondnumber:'
+	READ secondNum
+	IF operation == 1 THEN
+		total = add(firstNum,secondNum)
+		PRINT'sum of %d and %d is %d'%(firstNum,secondNum,total)
+	ELIF operation == 2 THEN
+		minus= subtract(firstNum,secondNum)
+		PRINT'Difference of the given two numbers is',minus
+	ELIF operation == 3 THEN
+		multi= multiply(firstNum,secondNum)
+		PRINT'Product of  %d and %d is %d'%(firstNum,secondNum,multi)
+	ELIF operation == 4 THEN
+		devided= devide(firstNum,secondNum)
+		PRINT'Devide of the given two numbers is',devided
+	ENDIF
+END

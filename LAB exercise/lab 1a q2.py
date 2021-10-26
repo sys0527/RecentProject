@@ -1,0 +1,15 @@
+print('Welcome to student registration system')
+
+name = input('Please enter your name:')
+studentId =input('Please enter your student id:')
+mark =float(input('Please enter your marks:'))
+grade =input('Please enter your grade:')
+cgpa =float(input('Please enter your CGPA:'))
+
+print('Your details are as follows:')
+print('Name: ', name)
+print('TP number: ', studentId)
+print('Marks: ', mark)
+print('Grade:' ,grade)
+print('CGPA: ', cgpa)
+print('Thank you for registering.')

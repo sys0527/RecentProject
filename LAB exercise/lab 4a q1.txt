@@ -1,0 +1,16 @@
+PROGRAM LAB4aQ1
+BEGIN
+	FUNCTION diffOfTwoNumber(num1,num2)
+		IF num1 > num2 THEN
+  	   	   	RETURN num1 - num2
+ 	   	ELSE
+ 		       	RETURN num2 - num1
+	ENDFUNCTION
+
+	PRINT'Enter first number:'
+	READ firstNum
+	PRINT'Enter second number:'
+	READ secondNum
+	diff = diffOfTwoNumber(firstNum, secondNum)
+	PRINT 'Difference of the given two numbers is:', diff
+END

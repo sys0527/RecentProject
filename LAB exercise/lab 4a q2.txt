@@ -1,0 +1,15 @@
+PROGRAM LAB4aQ2
+BEGIN
+	FUNCTION averageOfThreeNum(num1,num2,num3)
+		RETURN(num1+num2+num3)/3
+	ENDFUNCTION
+
+	PRINT'Enter first number:'
+	READ firstNum
+	PRINT'Enter second number:'
+	READ secondNum
+	PRINT'Enter third number:'
+	READ thirdNum
+	average = averageOfThreeNum(firstNum,secondNum,thirdNum)
+	PRINT 'Average of the given three numbers is: ',average
+END

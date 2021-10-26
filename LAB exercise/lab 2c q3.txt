@@ -1,0 +1,30 @@
+PROGRAM Lab2CQ3
+BEGIN
+	count = 0
+	DOWHILE count == 0 
+    		PRINT 'Enter your assignment marks: '
+		READ aMark 
+   		IF aMark > 25 THEN
+        		PRINT 'Enter your test marks: '
+			READ tMark 
+        		IF tMark >25 THEN
+				PRINT 'Enter your exam marks: '
+				READ eMark 
+            			IF eMark >50 THEN
+                			print('You have passed the module')
+            			ELSE
+                			print('Resit exam ')
+				ENDIF
+        		ELSE
+                		print('Resit the test ')
+			ENDIF
+    		ELSE
+                	print('Redo the assignment')
+		ENDIF
+    		PRINT('want continue? [enter 0 to next, 999 to end]')
+		READ count
+    		IF count == 999 THEN
+        		BREAK
+		ENDIF
+	ENDDO
+END
