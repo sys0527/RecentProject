@@ -1,0 +1,13 @@
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\RestourantTips\bin\Debug\RestourantTips.exe.config
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\RestourantTips\bin\Debug\RestourantTips.exe
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\RestourantTips\bin\Debug\RestourantTips.pdb
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\RestourantTips\obj\Debug\RestourantTips.csprojAssemblyReference.cache
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\RestourantTips\obj\Debug\RestourantTips.Properties.Resources.resources
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\RestourantTips\obj\Debug\RestourantTips.csproj.GenerateResource.cache
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\RestourantTips\obj\Debug\RestourantTips.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\RestourantTips\obj\Debug\RestourantTips.exe
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\RestourantTips\obj\Debug\RestourantTips.pdb
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\RestourantTips\obj\Debug\RestourantTips.frmRestaurantTip.resources
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\RestourantTips\obj\Debug\RestourantTips.frmTutorWages.resources
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\RestourantTips\obj\Debug\RestourantTips.frmDashboard.resources
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\RestourantTips\obj\Debug\RestourantTips.Restaurant_Receipt.resources

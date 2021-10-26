@@ -1,0 +1,11 @@
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\databaseDemo\bin\Debug\databaseDemo.exe.config
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\databaseDemo\bin\Debug\databaseDemo.exe
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\databaseDemo\bin\Debug\databaseDemo.pdb
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\databaseDemo\obj\Debug\databaseDemo.csprojAssemblyReference.cache
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\databaseDemo\obj\Debug\databaseDemo.Form1.resources
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\databaseDemo\obj\Debug\databaseDemo.Properties.Resources.resources
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\databaseDemo\obj\Debug\databaseDemo.csproj.GenerateResource.cache
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\databaseDemo\obj\Debug\databaseDemo.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\databaseDemo\obj\Debug\databaseDemo.exe
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\databaseDemo\obj\Debug\databaseDemo.pdb
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\databaseDemo\obj\Debug\databaseDemo.dashboard.resources

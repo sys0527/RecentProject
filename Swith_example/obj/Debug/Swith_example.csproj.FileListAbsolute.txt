@@ -1,0 +1,11 @@
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\Swith_example\bin\Debug\Swith_example.exe.config
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\Swith_example\bin\Debug\Swith_example.exe
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\Swith_example\bin\Debug\Swith_example.pdb
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\Swith_example\obj\Debug\Swith_example.csprojAssemblyReference.cache
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\Swith_example\obj\Debug\Swith_example.Form1.resources
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\Swith_example\obj\Debug\Swith_example.Properties.Resources.resources
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\Swith_example\obj\Debug\Swith_example.csproj.GenerateResource.cache
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\Swith_example\obj\Debug\Swith_example.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\Swith_example\obj\Debug\Swith_example.exe
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\Swith_example\obj\Debug\Swith_example.pdb
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\Swith_example\obj\Debug\Swith_example.Zodiac.resources

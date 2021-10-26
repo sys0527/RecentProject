@@ -1,0 +1,10 @@
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\eventsDemo\bin\Debug\eventsDemo.exe.config
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\eventsDemo\bin\Debug\eventsDemo.exe
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\eventsDemo\bin\Debug\eventsDemo.pdb
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\eventsDemo\obj\Debug\eventsDemo.csprojAssemblyReference.cache
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\eventsDemo\obj\Debug\eventsDemo.Form1.resources
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\eventsDemo\obj\Debug\eventsDemo.Properties.Resources.resources
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\eventsDemo\obj\Debug\eventsDemo.csproj.GenerateResource.cache
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\eventsDemo\obj\Debug\eventsDemo.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\eventsDemo\obj\Debug\eventsDemo.exe
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\eventsDemo\obj\Debug\eventsDemo.pdb

@@ -1,0 +1,10 @@
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\LoopLab1\bin\Debug\LoopLab1.exe.config
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\LoopLab1\bin\Debug\LoopLab1.exe
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\LoopLab1\bin\Debug\LoopLab1.pdb
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\LoopLab1\obj\Debug\LoopLab1.csprojAssemblyReference.cache
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\LoopLab1\obj\Debug\LoopLab1.Form1.resources
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\LoopLab1\obj\Debug\LoopLab1.Properties.Resources.resources
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\LoopLab1\obj\Debug\LoopLab1.csproj.GenerateResource.cache
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\LoopLab1\obj\Debug\LoopLab1.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\LoopLab1\obj\Debug\LoopLab1.exe
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\LoopLab1\obj\Debug\LoopLab1.pdb

@@ -1,0 +1,10 @@
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\restaurantReccipt\bin\Debug\restaurantReccipt.exe.config
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\restaurantReccipt\bin\Debug\restaurantReccipt.exe
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\restaurantReccipt\bin\Debug\restaurantReccipt.pdb
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\restaurantReccipt\obj\Debug\restaurantReccipt.csprojAssemblyReference.cache
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\restaurantReccipt\obj\Debug\restaurantReccipt.Form1.resources
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\restaurantReccipt\obj\Debug\restaurantReccipt.Properties.Resources.resources
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\restaurantReccipt\obj\Debug\restaurantReccipt.csproj.GenerateResource.cache
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\restaurantReccipt\obj\Debug\restaurantReccipt.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\restaurantReccipt\obj\Debug\restaurantReccipt.exe
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\restaurantReccipt\obj\Debug\restaurantReccipt.pdb

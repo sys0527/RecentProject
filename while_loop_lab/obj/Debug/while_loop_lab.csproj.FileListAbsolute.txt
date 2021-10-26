@@ -1,0 +1,12 @@
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\while_loop_lab\bin\Debug\while_loop_lab.exe.config
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\while_loop_lab\bin\Debug\while_loop_lab.exe
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\while_loop_lab\bin\Debug\while_loop_lab.pdb
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\while_loop_lab\obj\Debug\while_loop_lab.csprojAssemblyReference.cache
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\while_loop_lab\obj\Debug\while_loop_lab.Form1.resources
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\while_loop_lab\obj\Debug\while_loop_lab.Properties.Resources.resources
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\while_loop_lab\obj\Debug\while_loop_lab.csproj.GenerateResource.cache
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\while_loop_lab\obj\Debug\while_loop_lab.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\while_loop_lab\obj\Debug\while_loop_lab.exe
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\while_loop_lab\obj\Debug\while_loop_lab.pdb
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\while_loop_lab\obj\Debug\while_loop_lab.Find_Vowels.resources
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\while_loop_lab\obj\Debug\while_loop_lab.String_Function.resources

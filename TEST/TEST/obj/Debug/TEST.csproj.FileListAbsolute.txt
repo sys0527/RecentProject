@@ -1,0 +1,5 @@
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\TEST\TEST\obj\Debug\TEST.csprojAssemblyReference.cache
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\TEST\TEST\obj\Debug\TEST.Form1.resources
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\TEST\TEST\obj\Debug\TEST.Properties.Resources.resources
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\TEST\TEST\obj\Debug\TEST.csproj.GenerateResource.cache
+C:\Users\Owner\Documents\Visual Studio 2019\Projects\TEST\TEST\obj\Debug\TEST.csproj.CoreCompileInputs.cache
