@@ -1,0 +1,5 @@
+SafetyWBS01	SCWBS01	12	ZF Friedrichshafen AG	
+SafetyWBS02	SCWBS02	22	ZF Friedrichshafen AG	
+SafetyWBS03	SCWBS03	5	ZF Friedrichshafen AG	
+SafetyWBS04	SCWBS04	5	ZF Friedrichshafen AG	
+SafetyWBS05	SCWBS05	8	ZF Friedrichshafen AG	

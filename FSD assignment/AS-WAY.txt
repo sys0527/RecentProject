@@ -1,0 +1,5 @@
+air-conditioningWAY01	ASWAY01	4	Denso Corporation	
+air-conditioningWAY02	ASWAY02	14	Denso Corporation	
+air-conditioningWAY03	ASWAY03	8	Denso Corporation	
+air-conditioningWAY04	ASWAY04	21	Denso Corporation	
+air-conditioningWAY05	ASWAY05	17	Denso Corporation	

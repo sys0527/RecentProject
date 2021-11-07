@@ -1,0 +1,735 @@
+PROGRAM automobilePartsInventoryManagementSystem
+FUNCTION inventory()
+	DECLARE inventoryLocal as emptyARRAY
+	FOR i FROM 1 TO 1 
+		DECLARE parts as emptyARRAY
+		PRINT('Enter name of part: ')
+		READ partName
+		WRITE partName INTO parts
+		PRINT('Enter Part ID: ')
+		READ partId
+		WRITE partId INTO parts
+		PRINT("Enter Quantity of part: ")
+		READ partQuantity
+		WRITE partQuantity INTO parts
+		PRINT("Enter the company of supplier : ")
+		READ partSupplier
+		WRITE partSupplier INTO parts
+		WRITE partS INTO inventoryLocal
+	RETURN inventoryLocal 
+END FUNCTION 
+	
+FUNCTION supplier()
+	DECLARE supplierLocal as emptyARRAY
+	FOR i FROM 1 TO 1 
+		DECLARE supplierParts as emptyARRAY
+		PRINT('Enter name of company of supplier: ')
+		READ supplierName
+		WRITE supplierName INTO supplierParts 
+		PRINT('Enter company's contact number: ')
+		READ supplierContact
+		WRITE supplierContact INTO supplierParts 
+		PRINT("Enter partsID of supplier supplied: ")
+		READ supplierSupplied
+		WRITE supplierSupplied INTO supplierParts 
+		WRITE supplierParts INTO supplierLocal 
+	RETURN supplierLocal 
+ENDFUNCTION 
+
+FUNCTION update(newData, fileHandler)
+	FOR data IN newData
+    		FOR item IN data
+       			WRITE item INTO fileHandler
+        		WRITE tab INTO fileHandler
+    		WRITE new line INTO fileHandler
+ENDFUNCTION
+
+FUNCTION saveInventoryWBS()
+	PRINT('-----Adding parts into WBS warehouse-----')
+	PRINT('Add to which section? [1.Engine Section(ES), 2.Air-conditioning Section(AS), 3.Safety and Cockpit section(SC)]')
+	READ sellectedSection
+	IF sellectedSection is Integer
+		IF sellectedSection equal to 1 THEN
+			OPEN FILE 'ES-WBS.txt' as fileHandlerWBS in APPEND mode
+		ELIF sellectedSection equal to 2 THEN
+			OPEN FILE 'AS-WBS.txt' as fileHandlerWBS in APPEND mode
+		ELIF sellectedSection equal to 3 THEN
+			OPEN FILE 'SC-WBS.txt' as fileHandlerWBS in APPEND mode
+		ENDIF
+		inventoryWBS = CALL inventory()
+		updateWBS = CALL update(inventoryWBS, fileHandlerWBS)
+		CLOSE fileHandlerWBS
+	ELSE 
+		PRINT ('Wrong Typing')
+	ENDIF
+ENDFUNCTION	
+FUNCTION saveInventoryWAY()
+	PRINT('-----Adding parts into WAY warehouse-----')
+	PRINT('Add to which section? [1.Engine Section(ES), 2.Air-conditioning Section(AS), 3.Safety and Cockpit section(SC)]')
+	READ sellectedSection
+	IF sellectedSection is Integer THEN
+		IF sellectedSection equal to 1 THEN
+			OPEN FILE 'ES-WAY.txt' as fileHandlerWAY in APPEND mode
+		ELIF sellectedSection equal to 2 THEN
+			OPEN FILE 'AS-WAY.txt' as fileHandlerWAY in APPEND mode
+		ELIF sellectedSection equal to 3 THEN
+			OPEN FILE 'SC-WAY.txt' as fileHandlerWAY in APPEND mode
+		ENDIF
+		wayInventory = CALL inventory()
+		updateWAY = CALL update(wayInventory, fileHandlerWAY)
+		CLOSE fileHandlerWAY
+	ELSE 
+		PRINT ('Wrong Typing')
+`	ENDIF
+ENDFUNCTION	
+FUNCTION saveInventoryWBR()
+	PRINT('-----Adding parts into WBR warehouse-----')
+	PRINT('Add to which section? [1.Engine Section(ES), 2.Air-conditioning Section(AS), 3.Safety and Cockpit section(SC)]')
+	READ sellectedSection
+	IF sellectedSection is Integer THEN
+		IF sellectedSection equal to 1 THEN
+			OPEN FILE 'ES-WBR.txt' as fileHandlerWBR in APPEND mode
+		ELIF sellectedSection equal to 2 THEN
+			OPEN FILE 'AS-WBR.txt' as fileHandlerWBR in APPEND mode
+		ELIF sellectedSection equal to 3 THEN
+			OPEN FILE 'SC-WBR.txt' as fileHandlerWBR in APPEND mode
+		ENDIF
+		wbrInventory = CALL inventory()
+		updateWBR = CALL update(wbrInventory, fileHandlerWBR)
+		CLOSE fileHandlerWBR
+	ELSE 
+		PRINT ('Wrong Typing')	
+	ENDIF
+ENDFUNCTION	
+
+FUNCTION editQuantityWBS()
+	PRINT('Engine Section(ES), Air-conditioning Section(AS), Safety and Cockpit section(SC)')
+	PRINT('which sections:[Enter Code]')
+	READ secCode
+	IF secCode is Integer THEN
+		IF secCode equal to 'ES' THEN
+			OPEN FILE 'ES-WBS.txt' as fileHandlerWBS in READ mode
+			PRINT('Which part you need to edit?[Enter Part Id]')
+			READ pardIdForSearch	
+			PRINT('What is the new quantity of it')	
+			READ newQuantity	
+			DECLARE newData as emptyARRAY
+			readLine to return a line of text from fileHandlerWBS INTO data
+			FOR line IN data
+				CONVERT line into newLine as ARREY using tab as a delimiter
+				IF newLine[1] equal to partIdForSearch THEN
+					newLine[2] replace by newQuantity
+				ENDIF
+				APPEND newLine INTO newData
+				PRINT(newLine)
+			CLOSE fileHandlerWBS
+			OPEN FILE 'ES-WBS.txt' as fileHandlerWBS1 in WRITE mode
+			FOR data IN newData
+   				FOR item IN data
+       					WRITE item INTO fileHandlerWBS1 
+        				WRITE TAB INTO fileHandlerWBS1 
+    				WRITE new line INTO fileHandlerWBS1 
+			CLOSE fileHandlerWBS1	
+		ELIF secCode equal to 'AS' THEN
+			OPEN FILE 'AS-WBS.txt' as fileHandlerWBS in READ mode
+			PRINT('Which part you need to edit?[Enter Part Id]')
+			READ pardIdForSearch	
+			PRINT('What is the new quantity of it')	
+			READ newQuantity	
+			DECLARE newData as emptyARRAY
+			readLine to return a line of text from fileHandlerWBS INTO data
+			FOR line IN data
+				CONVERT line into newLine as ARREY using tab as a delimiter
+				IF newLine[1] equal to partIdForSearch THEN
+					newLine[2] replace by newQuantity
+				ENDIF
+				APPEND newLine INTO newData
+				PRINT(newLine)
+			CLOSE fileHandlerWBS
+			OPEN FILE 'AS-WBS.txt' as fileHandlerWBS1 in WRITE mode
+			FOR data IN newData
+    				FOR item IN data
+       					WRITE item INTO fileHandlerWBS1 
+        				WRITE TAB INTO fileHandlerWBS1 
+    				WRITE new line INTO fileHandlerWBS1 
+			CLOSE fileHandlerWBS1	
+		ELIF secCode equal to 'SC' THEN
+			OPEN FILE 'SC-WBS.txt' as fileHandlerWBS in READ mode
+			PRINT('Which part you need to edit?[Enter Part Id]')
+			READ pardIdForSearch	
+			PRINT('What is the new quantity of it')	
+			READ newQuantity	
+			DECLARE newData as emptyARRAY
+			readLine to return a line of text from fileHandlerWBS INTO data
+			FOR line IN data
+				CONVERT line into newLine as ARREY using tab as a delimiter
+				IF newLine[1] equal to partIdForSearch THEN
+					newLine[2] replace by newQuantity
+				ENDIF
+				APPEND newLine INTO newData
+				PRINT(newLine)
+			CLOSE fileHandlerWBS
+			OPEN FILE 'SC-WBS.txt' as fileHandlerWBS1 in WRITE mode
+			FOR data IN newData
+    				FOR item IN data
+       					WRITE item INTO fileHandlerWBS1 
+        				WRITE TAB INTO fileHandlerWBS1 
+    				WRITE new line INTO fileHandlerWBS1 
+			CLOSE fileHandlerWBS1
+	ELSE
+		PRINT ('Wrong Typing')
+	ENDIF
+ENDFUNCTION
+
+FUNCTION editQuantityWAY()
+	PRINT('Engine Section(ES), Air-conditioning Section(AS), Safety and Cockpit section(SC)')
+	PRINT('which sections:[Enter Code]')
+	READ secCode
+	IF secCode is Integer THEN
+		IF secCode equal to 'ES' THEN
+			OPEN FILE 'ES-WAY.txt' as fileHandlerWAY in READ mode
+			PRINT('Which part you need to edit?[Enter Part Id]')
+			READ pardIdForSearch	
+			PRINT('What is the new quantity of it')	
+			READ newQuantity	
+			DECLARE newData as emptyARRAY
+			readLine to return a line of text from fileHandlerWAY INTO data
+			FOR line IN data
+				CONVERT line into newLine as ARREY using tab as a delimiter
+				IF newLine[1] equal to partIdForSearch THEN
+					newLine[2] replace by newQuantity
+				ENDIF
+				APPEND newLine INTO newData
+				PRINT(newLine)
+			CLOSE fileHandlerWAY
+			OPEN FILE 'ES-WAY.txt' as fileHandlerWAY1 in WRITE mode
+			FOR data IN newData
+   				FOR item IN data
+       					WRITE item INTO fileHandlerWAY1 
+        				WRITE TAB INTO fileHandlerWAY1 
+    				WRITE new line INTO fileHandlerWAY1 
+			CLOSE fileHandlerWAY1	
+		ELIF secCode equal to 'AS' THEN
+			OPEN FILE 'AS-WAY.txt' as fileHandlerWAY in READ mode
+			PRINT('Which part you need to edit?[Enter Part Id]')
+			READ pardIdForSearch	
+			PRINT('What is the new quantity of it')	
+			READ newQuantity	
+			DECLARE newData as emptyARRAY
+			readLine to return a line of text from fileHandlerWAY INTO data
+			FOR line IN data
+				CONVERT line into newLine as ARREY using tab as a delimiter
+				IF newLine[1] equal to partIdForSearch THEN
+					newLine[2] replace by newQuantity
+				ENDIF
+				APPEND newLine INTO newData
+				PRINT(newLine)
+			CLOSE fileHandlerWAY
+			OPEN FILE 'AS-WAY.txt' as fileHandlerWAY1 in WRITE mode
+			FOR data IN newData
+    				FOR item IN data
+       					WRITE item INTO fileHandlerWAY1 
+        				WRITE TAB INTO fileHandlerWAY1 
+    				WRITE new line INTO fileHandlerWAY1 
+			CLOSE fileHandlerWAY1	
+		ELIF secCode equal to 'SC' THEN
+			OPEN FILE 'SC-WAY.txt' as fileHandlerWAY in READ mode
+			PRINT('Which part you need to edit?[Enter Part Id]')
+			READ pardIdForSearch	
+			PRINT('What is the new quantity of it')	
+			READ newQuantity	
+			DECLARE newData as emptyARRAY
+			readLine to return a line of text from fileHandlerWAY INTO data
+			FOR line IN data
+				CONVERT line into newLine as ARREY using tab as a delimiter
+				IF newLine[1] equal to partIdForSearch THEN
+					newLine[2] replace by newQuantity
+				ENDIF
+				APPEND newLine INTO newData
+				PRINT(newLine)
+			CLOSE fileHandlerWAY
+			OPEN FILE 'SC-WAY.txt' as fileHandlerWAY1 in WRITE mode
+			FOR data IN newData
+    				FOR item IN data
+       					WRITE item INTO fileHandlerWAY1 
+        				WRITE TAB INTO fileHandlerWAY1 
+    				WRITE new line INTO fileHandlerWAY1 
+			CLOSE fileHandlerWAY1
+	ELSE
+		PRINT ('Wrong Typing')
+	ENDIF
+ENDFUNCTION
+
+FUNCTION editQuantityWBR()
+	PRINT('Engine Section(ES), Air-conditioning Section(AS), Safety and Cockpit section(SC)')
+	PRINT('which sections:[Enter Code]')
+	READ secCode
+	IF secCode is Integer THEN
+		IF secCode equal to 'ES' THEN
+			OPEN FILE 'ES-WBR.txt' as fileHandlerWBR in READ mode
+			PRINT('Which part you need to edit?[Enter Part Id]')
+			READ pardIdForSearch	
+			PRINT('What is the new quantity of it')	
+			READ newQuantity	
+			DECLARE newData as emptyARRAY
+			readLine to return a line of text from fileHandlerWBR INTO data
+			FOR line IN data
+				CONVERT line into newLine as ARREY using tab as a delimiter
+				IF newLine[1] equal to partIdForSearch THEN
+					newLine[2] replace by newQuantity
+				ENDIF
+				APPEND newLine INTO newData
+				PRINT(newLine)
+			CLOSE fileHandlerWBR
+			OPEN FILE 'ES-WBR.txt' as fileHandlerWBR1 in WRITE mode
+			FOR data IN newData
+   				FOR item IN data
+       					WRITE item INTO fileHandlerWBR1 
+        				WRITE TAB INTO fileHandlerWBR1 
+    				WRITE new line INTO fileHandlerWBR1 
+			CLOSE fileHandlerWBR1	
+		ELIF secCode equal to 'AS' THEN
+			OPEN FILE 'AS-WBR.txt' as fileHandlerWBR in READ mode
+			PRINT('Which part you need to edit?[Enter Part Id]')
+			READ pardIdForSearch	
+			PRINT('What is the new quantity of it')	
+			READ newQuantity	
+			DECLARE newData as emptyARRAY
+			readLine to return a line of text from fileHandlerWBR INTO data
+			FOR line IN data
+				CONVERT line into newLine as ARREY using tab as a delimiter
+				IF newLine[1] equal to partIdForSearch THEN
+					newLine[2] replace by newQuantity
+				ENDIF
+				APPEND newLine INTO newData
+				PRINT(newLine)
+			CLOSE fileHandlerWBR
+			OPEN FILE 'AS-WBR.txt' as fileHandlerWBR1 in WRITE mode
+			FOR data IN newData
+    				FOR item IN data
+       					WRITE item INTO fileHandlerWBR1 
+        				WRITE TAB INTO fileHandlerWBR1 
+    				WRITE new line INTO fileHandlerWBR1 
+			CLOSE fileHandlerWBR1	
+		ELIF secCode equal to 'SC' THEN
+			OPEN FILE 'SC-WBR.txt' as fileHandlerWBR in READ mode
+			PRINT('Which part you need to edit?[Enter Part Id]')
+			READ pardIdForSearch	
+			PRINT('What is the new quantity of it')	
+			READ newQuantity	
+			DECLARE newData as emptyARRAY
+			readLine to return a line of text from fileHandlerWBR INTO data
+			FOR line IN data
+				CONVERT line into newLine as ARREY using tab as a delimiter
+				IF newLine[1] equal to partIdForSearch THEN
+					newLine[2] replace by newQuantity
+				ENDIF
+				APPEND newLine INTO newData
+				PRINT(newLine)
+			CLOSE fileHandlerWBR
+			OPEN FILE 'SC-WBR.txt' as fileHandlerWBR in WRITE mode
+			FOR data IN newData
+    				FOR item IN data
+       					WRITE item INTO fileHandlerWBR1 
+        				WRITE TAB INTO fileHandlerWBR1 
+    				WRITE new line INTO fileHandlerWBR1 
+			CLOSE fileHandlerWBR1
+	ELSE
+		PRINT ('Wrong Typing')
+	ENDIF
+ENDFUNCTION
+
+FUNCTION updateInventory()
+	PRINT('WBS warehouse,WAY warehouse, WBR warehouse')
+	PRINT('Which warehouse：[Enter code in Capital Letter]')
+	READ warCode
+	IF warCode is Integer THEN
+		IF warCode equal to 'WBS' THEN
+			PRINT(1.Add part)
+			PRINT(2.Edit Stock of Parts)
+			PRINT(Which service you want:)
+			READ service
+			IF service is Integer THEN
+				IF service equal to 1 THEN
+					content = CALL saveInventoryWBS()
+				ELIF service equal to 2 THEN
+					content = CALL editQuantityWBS()
+				ENDIF
+			ELSE
+				PRINT ('Wrong Typing')
+			ENDIF
+		ELIF warCode equal to 'WAY' THEN
+			PRINT(1.Add part)
+			PRINT(2.Edit Stock of Parts)
+			PRINT(Which service you want:)
+			READ service2
+			IF service2 is Integer THEN
+				IF service2 equal to 1 THEN
+					content = CALL saveInventoryWAY()
+				ELIF service2 equal to 2 THEN
+					content = CALL editQuantityWAY()
+				ENDIF
+			ELSE
+				PRINT ('Wrong Typing')
+			ENDIF
+		ELIF warCode equal to 'WBR' THEN
+			PRINT(1.Add part)
+			PRINT(2.Edit Stock of Parts)
+			PRINT(Which service you want:)
+			READ service3
+			IF service3 is Integer THEN
+				IF service3 equal to 1 THEN
+					content = CALL saveInventoryWBR()
+				ELIF service3 equal to 2 THEN
+					content = CALL editQuantityWBR()
+				ENDIF
+			ELSE
+				PRINT ('Wrong Typing')
+			ENDIF
+		ENDIF
+	ELSE
+		PRINT ('Wrong Typing')
+	ENDIF
+ENDFUNCTION
+	
+FUNCTION saveSupplier()
+	OPEN FILE 'supplierDetails.txt' as fileHandlerSup in APPEND MODE
+	PRINT('-----Adding supplier details-----')
+	supplierDetails = CALL supplier()
+	updateSup = CALL update(supplierDetails , fileHandlerSup)
+	CLOSE fileHandlerSup
+ENDFUNCTION		
+
+FUNCTION printWhole()
+	IF integer THEN
+		OPEN FILE 'ES-WBS.TXT' as fileHandlerESWBS in READ mode
+		OPEN FILE 'AS-WBS.TXT' as fileHandlerASWBS in READ mode
+		OPEN FILE 'SC-WBS.TXT' as fileHandlerSCWBS in READ mode
+		OPEN FILE 'ES-WAY.TXT' as fileHandlerESWAY in READ mode
+		OPEN FILE 'AS-WAY.TXT' as fileHandlerASWAY in READ mode
+		OPEN FILE 'SC-WAY.TXT' as fileHandlerSCWAY in READ mode
+		OPEN FILE 'ES-WBR.TXT' as fileHandlerESWBR in READ mode
+		OPEN FILE 'AS-WBR.TXT' as fileHandlerASWBR in READ mode
+		OPEN FILE 'SC-WBR.TXT' as fileHandlerSCWBR in READ mode
+	ELSE
+		PRINT('cannot read')
+	PRINT('Name','ID','Quantity','Supplier')
+	for lineWBS in fileHandlerESWBS 
+   		print(lineWBS)
+	for lineWBS in fileHandlerASWBS 
+    		print(lineWBS)
+	for lineWBS in fileHandlerSCWBS 
+    		print(lineWBS)
+	for lineWAY in fileHandlerESWAY 
+    		print(lineWAY)
+	for lineWAY in fileHandlerASWAY 
+    		print(lineWAY)
+	for lineWAY in fileHandlerSCWAY 
+    		print(lineWAY)
+	for lineWBR in fileHandlerESWBR 
+    		print(lineWBR)
+	for lineWBR in fileHandlerASWBR 
+    		print(lineWBR)
+	for lineWBR in fileHandlerSCWBR 
+    		print(lineWBR)
+	CLOSE FILE fileHandlerESWBS
+	CLOSE FILE fileHandlerASWBS
+	CLOSE FILE fileHandlerSCWBS
+	CLOSE FILE fileHandlerESWAY
+	CLOSE FILE fileHandlerASWAY
+	CLOSE FILE fileHandlerSCWAY
+	CLOSE FILE fileHandlerESWBR
+	CLOSE FILE fileHandlerASWBR
+	CLOSE FILE fileHandlerSCWBR 
+ENDFUNCTION	
+ 	
+FUNCTION printLesser()
+	IF integer THEN
+		OPEN FILE 'ES-WBS.TXT' as fileHandlerESWBS in READ mode
+		OPEN FILE 'AS-WBS.TXT' as fileHandlerASWBS in READ mode
+		OPEN FILE 'SC-WBS.TXT' as fileHandlerSCWBS in READ mode
+		OPEN FILE 'ES-WAY.TXT' as fileHandlerESWAY in READ mode
+		OPEN FILE 'AS-WAY.TXT' as fileHandlerASWAY in READ mode
+		OPEN FILE 'SC-WAY.TXT' as fileHandlerSCWAY in READ mode
+		OPEN FILE 'ES-WBR.TXT' as fileHandlerESWBR in READ mode
+		OPEN FILE 'AS-WBR.TXT' as fileHandlerASWBR in READ mode
+		OPEN FILE 'SC-WBR.TXT' as fileHandlerSCWBR in READ mode
+		DECLARE lesser AS an ARRAY ['0','1','2','3','4','5','6','7','8','9']
+	ELSE
+		PRINT('read file error')
+	PRINT'Parts that quantity less than 10:'
+	PRINT('Name','ID','Quantity','Supplier')
+	IF integer THEN
+		FOR lineWBS in fileHandlerESWBS
+			CONVERT lineWBS INTO newLineWBS as ARRAY using tab as a delimiter
+			IF newLineWBS[2] NOT IN lesser THEN
+				CONTINUE LOOP
+			print(lineWBS)
+		FOR lineWBS in fileHandlerASWBS 
+			CONVERT lineWBS INTO newLineWBS as ARRAY using tab as a delimiter
+			IF newLineWBS[2] NOT IN lesser THEN
+				CONTINUE LOOP
+			print(lineWBS)
+		FOR lineWBS in fileHandlerSCWBS
+			CONVERT lineWBS INTO newLineWBS as ARRAY using tab as a delimiter
+			IF newLineWBS[2] NOT IN lesser THEN
+				CONTINUE LOOP
+			print(lineWBS)
+		FOR lineWAY IN fileHandlerESWAY 
+			CONVERT lineWAY INTO newLineWAY as ARRAY using tab as a delimiter
+			IF newLineWAY[2] NOT IN lesser THEN
+				CONTINUE LOOP
+			print(lineWAY)
+		FOR lineWAY IN fileHandlerASWAY 
+			CONVERT lineWAY INTO newLineWAY as ARRAY using tab as a delimiter
+			IF newLineWAY[2] NOT IN lesser THEN
+				CONTINUE LOOP
+			print(lineWAY)
+		FOR lineWAY IN fileHandlerSCWAY 
+			CONVERT lineWAY INTO newLineWAY as ARRAY using tab as a delimiter
+			IF newLineWAY[2] NOT IN lesser THEN
+				CONTINUE LOOP
+			print(lineWAY)
+		FOR lineWBR IN fileHandlerESWBR 
+			CONVERT lineWBR INTO newLineWBR as ARRAY using tab as a delimiter
+			IF newLineWBR[2] NOT IN lesser THEN
+				CONTINUE LOOP
+			print(lineWBR)
+		FOR lineWBR IN fileHandlerASWBR 
+			CONVERT lineWBR INTO newLineWBR as ARRAY using tab as a delimiter
+			IF newLineWBR[2] NOT IN lesser THEN
+				CONTINUE LOOP
+			print(lineWBR)
+		FOR lineWBR IN fileHandlerSCWBR 
+			CONVERT lineWBR INTO newLineWBR as ARRAY using tab as a delimiter
+			IF newLineWBR[2] NOT IN lesser THEN
+				CONTINUE LOOP
+			print(lineWBR)
+	ELSE
+		PRINT('print error')
+	CLOSE FILE fileHandlerESWBS
+	CLOSE FILE fileHandlerASWBS
+	CLOSE FILE fileHandlerSCWBS
+	CLOSE FILE fileHandlerESWAY
+	CLOSE FILE fileHandlerASWAY
+	CLOSE FILE fileHandlerSCWAY
+	CLOSE FILE fileHandlerESWBR
+	CLOSE FILE fileHandlerASWBR
+	CLOSE FILE fileHandlerSCWBR
+ENDFUNCTION
+
+FUNCTION printWarehouseParts()
+	PRINT('Enter number of warehouse you want to print(1.WBS,2.WAY,3.WBR)')
+	READ warehouseChoosed
+	IF warehouseChoosed is integer THEN
+		PRINT('Name','ID','Quantity','Supplier')
+		IF warehouseChoosed equal to 1 THEN
+			OPEN FILE 'ES-WBS.TXT' as fileHandlerESWBS in READ mode
+			OPEN FILE 'AS-WBS.TXT' as fileHandlerASWBS in READ mode
+			OPEN FILE 'SC-WBS.TXT' as fileHandlerSCWBS in READ mode
+			PRINT('the parts of engine section(ES)')
+			FOR lineWBS IN fileHandlerESWBS 
+				print(lineWBS)
+			PRINT('the parts of air-conditioning section(AS)')
+			FOR lineWBS IN fileHandlerASWBS 
+				print(lineWBS)
+			PRINT('the parts of safety and cockpit section(SC)')
+			FOR lineWBS IN fileHandlerSCWBS 
+				print(lineWBS)
+			CLOSE FILE fileHandlerESWBS
+			CLOSE FILE fileHandlerASWBS
+			CLOSE FILE fileHandlerSCWBS
+		ELIF warehouseChoosed equal to 2 THEN
+			OPEN FILE 'ES-WAY.TXT' as fileHandlerESWAY in READ mode
+			OPEN FILE 'AS-WAY.TXT' as fileHandlerASWAY in READ mode
+			OPEN FILE 'SC-WAY.TXT' as fileHandlerSCWAY in READ mode
+			PRINT('the parts of engine section(ES)')
+			FOR lineWAY IN fileHandlerESWAY 
+				print(lineWAY)
+			PRINT('the parts of air-conditioning section(AS)')
+			FOR lineWAY IN fileHandlerASWAY 
+				print(lineWAY)
+			PRINT('the parts of safety and cockpit section(SC)')
+			FOR lineWAY IN fileHandlerSCWAY 
+				print(lineWAY)
+			CLOSE FILE fileHandlerESWAY
+			CLOSE FILE fileHandlerASWAY
+			CLOSE FILE fileHandlerSCWAY
+		ELIF warehouseChoosed equal to 3 THEN
+			OPEN FILE 'ES-WBR.TXT' as fileHandlerESWBR in READ mode
+			OPEN FILE 'AS-WBR.TXT' as fileHandlerASWBR in READ mode
+			OPEN FILE 'SC-WBR.TXT' as fileHandlerSCWBR in READ mode
+			PRINT('the parts of engine section(ES)')
+			FOR lineWBR IN fileHandlerESWBR 
+				print(lineWBR)
+			PRINT('the parts of air-conditioning section(AS)')
+			FOR lineWBR IN fileHandlerASWBR 
+				print(lineWBR)
+			PRINT('the parts of safety and cockpit section(SC)')
+			FOR lineWBR IN fileHandlerSCWBR 
+				print(lineWBR)
+			CLOSE FILE fileHandlerESWBR
+			CLOSE FILE fileHandlerASWBR
+			CLOSE FILE fileHandlerSCWBR
+		ENDIF
+	ELSE
+		PRINT ('Wrong Typing')
+	ENDIF
+ENDFUNCTION
+
+FUNCTION searchPart()
+	OPEN FILE 'ES-WBS.TXT' as fileHandlerESWBS in READ mode
+	OPEN FILE 'AS-WBS.TXT' as fileHandlerASWBS in READ mode
+	OPEN FILE 'SC-WBS.TXT' as fileHandlerSCWBS in READ mode
+	OPEN FILE 'ES-WAY.TXT' as fileHandlerESWAY in READ mode
+	OPEN FILE 'AS-WAY.TXT' as fileHandlerASWAY in READ mode
+	OPEN FILE 'SC-WAY.TXT' as fileHandlerSCWAY in READ mode
+	OPEN FILE 'ES-WBR.TXT' as fileHandlerESWBR in READ mode
+	OPEN FILE 'AS-WBR.TXT' as fileHandlerASWBR in READ mode
+	OPEN FILE 'SC-WBR.TXT' as fileHandlerSCWBR in READ mode
+	PRINT ('Enter Part Id you want to search')
+	READ keyword
+	PRINT('Name','ID','Quantity','Supplier')
+	IF keyword is integer THEN
+		FOR lineWBS IN fileHandlerESWBS 
+			CONVERT lineWBS INTO newLineWBS as ARRAY using tab as a delimiter
+			IF newLineWBS[1] equal to keyword
+				print(newLineWBS)
+		FOR lineWBS IN fileHandlerASWBS 
+			CONVERT lineWBS INTO newLineWBS as ARRAY using tab as a delimiter
+			IF newLineWBS[1] equal to keyword
+				print(newLineWBS)
+		FOR lineWBS IN fileHandlerSCWBS 
+			CONVERT lineWBS INTO newLineWBS as ARRAY using tab as a delimiter
+			IF newLineWBS[1] equal to keyword
+				print(newLineWBS)
+		FOR lineWAY IN fileHandlerESWAY 
+			CONVERT lineWAY INTO newLineWAY as ARRAY using tab as a delimiter
+			IF newLineWAY[1] equal to keyword
+				print(newLineWAY)
+		FOR lineWAY IN fileHandlerASWAY 
+			CONVERT lineWAY INTO newLineWAY as ARRAY using tab as a delimiter
+			IF newLineWAY[1] equal to keyword
+				print(newLineWAY)
+		FOR lineWAY IN fileHandlerSCWAY 
+			CONVERT lineWAY INTO newLineWAY as ARRAY using tab as a delimiter
+			IF newLineWAY[1] equal to keyword
+				print(newLineWAY)
+		FOR lineWBR IN fileHandlerESWBR 
+			CONVERT lineWBR INTO newLineWBR as ARRAY using tab as a delimiter
+			IF newLineWBR[1] equal to keyword
+				print(newlineWBR)
+		FOR lineWBR IN fileHandlerASWBR 
+			CONVERT lineWBR INTO newLineWBR as ARRAY using tab as a delimiter
+			IF newLineWBR[1] equal to keyword
+				print(newlineWBR)
+		FOR lineWBR IN fileHandlerSCWBR 
+			CONVERT lineWBR INTO newLineWBR as ARRAY using tab as a delimiter
+			IF newLineWBR[1] equal to keyword
+				print(newlineWBR)
+	ELSE
+		PRINT('searching error')
+	ENDIF
+	CLOSE FILE fileHandlerESWBS
+	CLOSE FILE fileHandlerASWBS
+	CLOSE FILE fileHandlerSCWBS
+	CLOSE FILE fileHandlerESWAY
+	CLOSE FILE fileHandlerASWAY
+	CLOSE FILE fileHandlerSCWAY
+	CLOSE FILE fileHandlerESWBR
+	CLOSE FILE fileHandlerASWBR
+	CLOSE FILE fileHandlerSCWBR
+ENDFUNCTION
+
+FUNCTION searchSupplier()
+	IF integer THEN
+		OPEN 'supplierDetails.txt' as supplierInfo INTO READ mode
+	ELSE
+		PRINT('Error while open file')
+	PRINT('Enter the partID that it supplied to search the company of supplier')
+	READ keywordOfSup
+	FOR lineSup IN supplierInfo
+		CONVERT lineSup INTO newLineSup as ARRAY using tab as a delimiter
+		IF keywordOfSup NOT IN newLineSup
+			CONTINUE LOOP
+		ENDIF
+		print(lineSup )
+	CLOSE FILE supplierInfo
+ENDFUNCTION
+		
+FUNCTION searchPartSupplied()
+	IF integer THEN
+		OPEN 'supplierDetails.txt' as supplierInfo INTO READ mode
+	ELSE
+		PRINT('Error while open file')
+	PRINT('Enter suppier's company name who want to search for:')
+	READ supName
+	FOR lineSup IN supplierInfo
+		CONVERT lineSup INTO newLineSup as ARRAY using tab as a delimiter
+		IF supName NOT IN newLineSup
+			CONTINUE LOOP
+		ENDIF
+		print(lineSup )
+	CLOSE FILE supplierInfo
+ENDFUNCTION
+
+FUNCTION menu() 
+	PRINT('Welcome to use Automobile Parts Inventory Management System')
+	DOWHILE TRUE
+		PRINT('1.Update parts inventory')
+		PRINT('2.Parts Inventory Tracking')
+		PRINT('3.Search')
+		PRINT('4.Exit')
+		PRINT('What you want to do?')
+		READ choice
+		IF choice is Integer
+			IF choice equal to 1 THEN
+				PRINT(1.update inventory)
+				PRINT(2.update Supplier)
+				PRINT('What you want to do?')
+				read optionUpdate
+				IF optionUpdate equal to 1 THEN
+					CALL updateInventory()
+				ELIF optionUpdate equal to 2 THEN
+					CALL saveSupplier()
+				ELSE
+					PRINT ('Wrong Typing')
+			ELIF choice equal to 2 THEN
+				PRINT(1. print whole availabile quantity )
+				PRINT(2. print all part that quantity less then 10 units)
+				PRINT(3. print the whole parts of sections in warehouse)
+				PRINT('What you want to do?')
+				read optionUpdate2
+				IF optionUpdate2 equal to 1 THEN
+					CALL printWhole()
+				ELIF optionUpdate2 equal to 2 THEN
+					CALL printLesser()
+				ELIF optionUpdate2 equal to 3 THEN
+					CALL printWarehouseParts()
+				ELSE
+					PRINT ('Wrong Typing')
+			ELIF choice equal to 3 THEN
+				PRINT(1. search parts record)
+				PRINT(2. search supplier detail )
+				PRINT(3. search parts that supplied by supplier )
+				PRINT('What you want to do?')
+				read optionUpdate3
+				IF optionUpdate3 equal to 1 THEN
+					CALL searchPart()
+				ELIF optionUpdate3 equal to 2 THEN
+					CALL searchSupplier()
+				ELIF optionUpdate3 equal to 3 THEN
+					CALL searchPartSupplied()
+				ELSE
+					PRINT ('Wrong Typing')
+			ELIF choice equal to 4 THEN
+				PRINT('THANK YOU FOR USING SYSTEM')
+				BREAK LOOP
+		ELSE
+			PRINT ('Wrong Typing')
+	ENDWHILE
+ENDFUNCTION
+
+BEGIN
+	CALL menu()
+END

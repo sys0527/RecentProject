@@ -1,0 +1,5 @@
+air-conditioningWBR01	ASWBR01	4	Denso Corporation	
+air-conditioningWBR02	ASWBR02	9	Denso Corporation	
+air-conditioningWBR03	ASWBR03	14	Denso Corporation	
+air-conditioningWBR04	ASWBR04	7	Denso Corporation	
+air-conditioningWBR05	ASWBR05	22	Denso Corporation	

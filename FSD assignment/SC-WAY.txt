@@ -1,0 +1,5 @@
+SafetyWAY01	SCWAY01	17	Robert Bosch GmbH	
+SafetyWAY02	SCWAY02	7	Robert Bosch GmbH	
+SafetyWAY03	SCWAY03	13	Robert Bosch GmbH	
+SafetyWAY04	SCWAY04	11	Robert Bosch GmbH	
+SafetyWAY05	SCWAY05	9	Robert Bosch GmbH	

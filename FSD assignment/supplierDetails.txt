@@ -1,0 +1,10 @@
+Robert Bosch GmbH	07-2336060	SCWAY	
+Robert Bosch GmbH	07-2336060	SCWBR	
+ZF Friedrichshafen AG	07-1112222	SCWBS	
+Aisin Seiki Corporation	07-1234567	ESWBR	
+Aisin Seiki Corporation	07-1234567	ESWAY	
+Aisin Seiki Corporation	07-1234567	ESWBS
+Denso Corporation	07-9900990	ASWBR	
+Denso Corporation	07-9900990	ASWBS	
+Denso Corporation	07-9900990	ASWAY	
+

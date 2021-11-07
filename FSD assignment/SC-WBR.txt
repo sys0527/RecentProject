@@ -1,0 +1,5 @@
+safetyWBR01	SCWBR01	3	Robert Bosch GmbH	
+safetyWBR02	SCWBR02	7	Robert Bosch GmbH	
+safetyWBR03	SCWBR03	5	Robert Bosch GmbH	
+safetyWBR04	SCWBR04	13	Robert Bosch GmbH	
+safetyWBR05	SCWBR05	19	Robert Bosch GmbH	
